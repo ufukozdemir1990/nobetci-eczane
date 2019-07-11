@@ -3,6 +3,8 @@ Php ile günlük nöbetçi eczane listesini veren Php sınıfı
 
 Eczanelere ait veriler <a href="https://ecza.io/" target="_blank">ecza.io</a> sitesinden alınmıştır. 
 
+Ecza.io sitesinden çekilen veriler, json olarak tutulabilir. Bu sayede her seferinde Ecza.io sitesinden çekilmeyeceği için performans artışı sağlanabilir.
+
 <h2>Çalışma Mantığı</h2>
 
 Öncelikle Php Sınıfımızı Sayfaya Dahil Edelim.
