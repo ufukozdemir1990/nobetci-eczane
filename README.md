@@ -11,18 +11,26 @@ require_once("NobetciEczane.class.php");
 ```
 Daha Sonra Sınıfımızı Başlatalım. 
 ```php
-$eczane = new NobetciEczane("izmir", "bornova"); // Hangi İli ve İlçeyi İstiyorsak Parametre Verileri Gönderlim
+// Hangi İli ve İlçeyi İstiyorsak Parametre Verileri Gönderlim
+$eczane = new NobetciEczane("izmir", "bornova");
 ```
 
 Daha Sonra Nöbetçi Eczanelerimizi Çekelim.
 ```php
-echo $eczane->getir(); // Verilerimizi Çekebiliriz.
-
+// Verilerimizi Çekebiliriz.
+echo $eczane->getir();
 ```
 
 Genel Olarak Tam Kodumuz Şöyle. 
 ```php
 header("Content-type:application/jSon");
-require_once("NobetciEczane.class.php"); // Sınıfımızı Sayfamıza Dahil Ettik 
-$eczane = new NobetciEczane("izmir", "bornova"); // Sınıfı Başlattık 
-echo $eczane->getir(); // Nöbetçi Eczanelerimizi JSON Olarak Çektik 
+
+// Sınıfımızı Sayfamıza Dahil Ettik 
+require_once("NobetciEczane.class.php");
+
+// Sınıfı Başlattık 
+$eczane = new NobetciEczane("izmir", "bornova");
+
+// Nöbetçi Eczanelerimizi JSON Olarak Çektik 
+echo $eczane->getir();
+```
