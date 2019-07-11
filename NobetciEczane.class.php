@@ -44,10 +44,12 @@
                 preg_match_all('#<h6 style="margin-top:5px;" >(.*?)</h6>#si', $nobetci_ezcaneler[0][$i],$eczane_adi);
                 preg_match_all('#<p>(.*?)</p>#si', $nobetci_ezcaneler[0][$i],$eczane_bilgi);
 
-                $this->verilerArray[$i]['eczane_tarih']     = $this->tarih[0];
-                $this->verilerArray[$i]['eczane_adi']       = strip_tags($eczane_adi[0][0]);
-                $this->verilerArray[$i]['eczane_adres']     = str_replace('Adres: ', '', strip_tags($eczane_bilgi[0][0]));
-                $this->verilerArray[$i]['eczane_telefon']   = str_replace('Telefon: ', '', strip_tags($eczane_bilgi[0][1]));
+                if (!empty(strip_tags($eczane_adi[0][0]))) {
+                    $this->verilerArray[$i]['eczane_tarih']     = $this->tarih[0];
+                    $this->verilerArray[$i]['eczane_adi']       = strip_tags($eczane_adi[0][0]);
+                    $this->verilerArray[$i]['eczane_adres']     = str_replace('Adres: ', '', strip_tags($eczane_bilgi[0][0]));
+                    $this->verilerArray[$i]['eczane_telefon']   = str_replace('Telefon: ', '', strip_tags($eczane_bilgi[0][1]));
+                }
             }
         }
 
