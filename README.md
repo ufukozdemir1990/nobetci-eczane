@@ -11,7 +11,7 @@ require_once("NobetciEczane.class.php");
 ```
 Daha Sonra Sınıfımızı Başlatalım. 
 ```php
-$eczane = new NobetciEczane("izmir", "bornova"); // Hangi İli ve İlçeyi İstiyorsak Parametre Olarak O ili Verelim
+$eczane = new NobetciEczane("izmir", "bornova"); // Hangi İli ve İlçeyi İstiyorsak Parametre Verileri Gönderlim
 ```
 
 Daha Sonra Nöbetçi Eczanelerimizi Çekelim.
