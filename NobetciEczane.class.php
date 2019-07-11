@@ -73,7 +73,6 @@
             } else {
                 file_put_contents($eczane, json_encode($this->verilerArray));
             }
-
             return file_get_contents($eczane);
         }
 
